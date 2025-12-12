@@ -25,7 +25,7 @@ spec:               # Configuration du Deployment.
           readinessProbe: # vérifier etat de santé   --> Vérifie si prête à recevoir du trafic
             httpGet:
               path: /actuator/health
-              port: config
+              port: 9999
             initialDelaySeconds: 5 # attendre 5s avant la 1ère vérification
             periodSeconds: 10       # tester toutes les 5s
             failureThreshold: 4    #si 4 échecs → Pod marqué “not ready”
