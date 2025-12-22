@@ -28,7 +28,7 @@ public class SecurityConfig {
         return httpSecurity
                 .sessionManagement(sess-> sess.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .csrf(csrf -> csrf.disable())
-                .authorizeRequests(auth -> auth.requestMatchers("/actuator/health", "/actuator/health/**").permitAll())
+                .authorizeRequests(auth -> auth.requestMatchers("/actuator/health", "/actuator/health/**" , "/actuator/*").permitAll())
                 .authorizeRequests(auth -> auth.anyRequest().authenticated())
 
                 .oauth2ResourceServer(OAuth2ResourceServerConfigurer::jwt)
