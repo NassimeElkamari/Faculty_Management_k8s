@@ -21,7 +21,7 @@ spec:
           env:
             - name: DISCOVERY_SERVICE_URL
               value: http://faculty-discovery-service.default.svc.cluster.local:8761/eureka
-            - name: CONFIG_SERVICE_URL
+            - name: CONFIG_SERvICE_URL
               value: http://faculty-config-service.default.svc.cluster.local:9999
           readinessProbe:
             httpGet:
